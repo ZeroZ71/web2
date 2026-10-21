@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nube Local - SPA Client</title>
+    <link rel="stylesheet" href="CloudStyle.css">
+    <script src="ArtPlayer.js"></script>
 </head>
 <body>
-    <h1>hello</h1>
+    <header>
+        <h1 id="pathTitle">📂 Servidor Local: /</h1>
+        
+        <input type="file" id="fileInput" style="display: none;">
+        <button type="button" onclick="document.getElementById('fileInput').click();">Subir Archivo</button>
+        <button type="button" class="btn btn-danger" onclick="deleteSelected();">Borrar Seleccionados</button>
+    </header>
+
+    <div id="navigation"></div>
+    <ul id="fileList"></ul>
+
+    <div id="artplayer" style="width: 800px; height: 450px; display: none;"></div>
+
+    <script src="app.js"></script>
 </body>
 </html>
